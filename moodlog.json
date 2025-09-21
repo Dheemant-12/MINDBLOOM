@@ -1,0 +1,61 @@
+{
+  "name": "MoodLog",
+  "type": "object",
+  "properties": {
+    "mood": {
+      "type": "string",
+      "enum": [
+        "very_happy",
+        "happy",
+        "neutral",
+        "sad",
+        "stressed",
+        "anxious",
+        "excited",
+        "grateful",
+        "angry",
+        "overwhelmed"
+      ],
+      "description": "The user's primary mood for the day"
+    },
+    "intensity": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 10,
+      "description": "Intensity of the mood from 1-10"
+    },
+    "note": {
+      "type": "string",
+      "description": "Optional note about the mood"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the mood log"
+    },
+    "activities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "exercise",
+          "meditation",
+          "socializing",
+          "creative",
+          "nature",
+          "music",
+          "reading",
+          "gaming",
+          "studying",
+          "helping_others"
+        ]
+      },
+      "description": "Activities that influenced the mood"
+    }
+  },
+  "required": [
+    "mood",
+    "intensity",
+    "date"
+  ]
+}

@@ -1,0 +1,19 @@
+import React from "react";
+import ActiveChallenges from "../components/challenges/ActiveChallenges";
+
+export default function Challenges() {
+  return (
+    <div className="p-4 md:p-8 pb-20 lg:pb-8 max-w-6xl mx-auto">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
+          Community Challenges
+        </h1>
+        <p className="text-gray-600">
+          Join wellness challenges and grow together with the MindBloom community
+        </p>
+      </div>
+
+      <ActiveChallenges />
+    </div>
+  );
+}

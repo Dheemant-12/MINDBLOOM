@@ -1,0 +1,32 @@
+{
+  "name": "ChallengeProgress",
+  "type": "object",
+  "properties": {
+    "challenge_id": {
+      "type": "string",
+      "description": "ID of the challenge"
+    },
+    "day_number": {
+      "type": "number",
+      "description": "Which day of the challenge this is"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this day was completed"
+    },
+    "response": {
+      "type": "string",
+      "description": "User's response to the daily prompt"
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when completed"
+    }
+  },
+  "required": [
+    "challenge_id",
+    "day_number"
+  ]
+}

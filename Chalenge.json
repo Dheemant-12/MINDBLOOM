@@ -1,0 +1,40 @@
+{
+  "name": "Challenge",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Challenge title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Challenge description"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "gratitude",
+        "mindfulness",
+        "kindness",
+        "creativity",
+        "movement",
+        "connection"
+      ],
+      "description": "Type of challenge"
+    },
+    "duration_days": {
+      "type": "number",
+      "description": "How many days the challenge lasts"
+    },
+    "daily_prompts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Daily prompts for the challenge"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this challenge is currently active"
+ 

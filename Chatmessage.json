@@ -1,0 +1,40 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "description": "The chat message content"
+    },
+    "is_user": {
+      "type": "boolean",
+      "description": "Whether this message is from the user (true) or AI (false)"
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Chat session identifier"
+    },
+    "mood_context": {
+      "type": "string",
+      "enum": [
+        "support",
+        "journaling",
+        "stress_relief",
+        "goal_setting",
+        "gratitude",
+        "general"
+      ],
+      "description": "Context type for the conversation"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the message was sent"
+    }
+  },
+  "required": [
+    "message",
+    "is_user",
+    "session_id"
+  ]
+}
